@@ -289,7 +289,7 @@ greeting().then((value) => {
 
 //! Throwing Custom Errors
 //* throw new Error("Getting Bored");
-//* throw new SyntaxError("You Dumbass")
+//* throw new SyntaxError("You Idiot")
 
 
 //! Error Handling : try , catch and finally
@@ -303,7 +303,7 @@ try {
 
 
 //! Fetch API : to fetch details from API. Usually details are in JSON format. By default API request is in Get method.
-let weatherCity = "newyork";
+let weatherCity = "ohio";
 let fetchedData = fetch(`https://goweather.herokuapp.com/weather/${weatherCity}`);
 
 fetchedData.then((response) => {
@@ -337,7 +337,7 @@ myPostRequest.then((response) => {
 console.log(document.cookie) //! To view cookies
 
 document.cookie = "name = Avijit";
-document.cookie = "name2 = Jeet";
+document.cookie = "name2 = Avijit2";
 let cookieCityKey = "city";
 let cookieCityValue = "ulhasnagar";
 document.cookie = `${encodeURIComponent(cookieCityKey)}=${encodeURIComponent(cookieCityValue)}`
@@ -358,14 +358,14 @@ let human1 = {
 }
 
 let human2 = {
-    name: "Jeet",
+    name: "Avijit2",
     run: () => {
         alert("Running");
     }
 }
 
 let human3 = {
-    name: "Ankush",
+    name: "myNameAvijit",
     fly: () => {
         alert("Flying");
     }

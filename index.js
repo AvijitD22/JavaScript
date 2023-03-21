@@ -403,3 +403,33 @@ class applicationForm {
 let person1 = new applicationForm("Avijit", 21, 1);
 person1.submit();
 person1.cancel();
+
+
+//! Inheritance : Extends Keyword : Used to create new classes while including methods of other classes.
+class Animal {
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    run() {
+        console.log(`${this.name} is Running...`);
+    }
+
+    shout() {
+        console.log(`${this.name} is Shouting...`);
+    }
+}
+
+let lion = new Animal("King", "Golden");
+lion.run();
+
+class Monkey extends Animal {
+    eatBanana() {
+        console.log(`${this.name} is Eating Banana`);
+    }
+}
+
+let myMonkey = new Monkey("Monu", "Orange");
+myMonkey.eatBanana();
+myMonkey.run();

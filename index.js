@@ -478,3 +478,26 @@ firstEmployee.requestLeave(5);
 //*     super(...args);
 //* }
 //! To Override constructor in child classes we have to use super keyword in constructor as shown above. And then we can add extra requirements.
+
+
+
+//! Static methods: This methods can be used outside the class. While using we have to use class name. 
+class Animal {
+    constructor(name) {
+        this.name = Animal.capitalize(name);
+    }
+
+    run() {
+        console.log(`Animal ${this.name} is running...`)
+    }
+
+    static capitalize(name) {
+        return name.charAt(0).toUpperCase() + name.substr(1, name.length);
+    }
+}
+
+let myAnimal = new Animal("king");
+myAnimal.run();
+
+//! Example of using static method outside class. 
+console.log(Animal.capitalize("lol"));

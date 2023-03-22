@@ -501,3 +501,30 @@ myAnimal.run();
 
 //! Example of using static method outside class. 
 console.log(Animal.capitalize("lol"));
+
+
+//! Setter and Getter : To set and get values
+class Animal {
+    constructor(name) {
+        this._name = name;
+    }
+
+    run() {
+        console.log("Flying...");
+    }
+
+    get name() {
+        return this._name
+    }
+
+    set name(newName) {
+        this._name = newName
+    }
+}
+
+let newAnimal = new Animal("King")
+newAnimal.run();
+//! Setting Value
+newAnimal.name = "Avi"
+//! Getting Value
+console.log(newAnimal.name)

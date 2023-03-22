@@ -406,7 +406,7 @@ person1.cancel();
 
 
 //! Inheritance : Extends Keyword : Used to create new classes while including methods of other classes.
-class Animal {
+class Animal1 {
     constructor(name, color) {
         this.name = name;
         this.color = color;
@@ -421,10 +421,10 @@ class Animal {
     }
 }
 
-let lion = new Animal("King", "Golden");
+let lion = new Animal1("King", "Golden");
 lion.run();
 
-class Monkey extends Animal {
+class Monkey extends Animal1 {
     eatBanana() {
         console.log(`${this.name} is Eating Banana`);
     }
@@ -482,9 +482,9 @@ firstEmployee.requestLeave(5);
 
 
 //! Static methods: This methods can be used outside the class. While using we have to use class name. 
-class Animal {
+class Animal2 {
     constructor(name) {
-        this.name = Animal.capitalize(name);
+        this.name = Animal2.capitalize(name);
     }
 
     run() {
@@ -496,15 +496,15 @@ class Animal {
     }
 }
 
-let myAnimal = new Animal("king");
+let myAnimal = new Animal2("king");
 myAnimal.run();
 
 //! Example of using static method outside class. 
-console.log(Animal.capitalize("lol"));
+console.log(Animal2.capitalize("lol"));
 
 
 //! Setter and Getter : To set and get values
-class Animal {
+class Animal3 {
     constructor(name) {
         this._name = name;
     }
@@ -522,9 +522,13 @@ class Animal {
     }
 }
 
-let newAnimal = new Animal("King")
+let newAnimal = new Animal3("King")
 newAnimal.run();
 //! Setting Value
 newAnimal.name = "Avi"
 //! Getting Value
 console.log(newAnimal.name)
+
+
+//! instance of operator : Used to check if the instance is from specified class. 
+console.log(newAnimal instanceof Animal3);

@@ -470,3 +470,11 @@ class Programmer extends Employee {
 
 let firstEmployee = new Programmer();
 firstEmployee.requestLeave(5);
+
+//! Constructor overriding
+//! When there is no constructor in child classes, then constructor of parent class is called.
+//! Constructor in child classes :-
+//* constructor(...args){
+//*     super(...args);
+//* }
+//! To Override constructor in child classes we have to use super keyword in constructor as shown above. And then we can add extra requirements.

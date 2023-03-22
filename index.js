@@ -433,3 +433,40 @@ class Monkey extends Animal {
 let myMonkey = new Monkey("Monu", "Orange");
 myMonkey.eatBanana();
 myMonkey.run();
+
+
+//! Method Overriding
+class Employee {
+    constructor() {}
+
+    login() {
+        console.log(`Employee Logged in`);
+    }
+
+    logout() {
+        console.log(`Employee Logout`);
+    }
+
+    requestLeave(leaves) {
+        console.log(`Employee has Requested ${leaves} leaves`);
+    }
+}
+
+class Programmer extends Employee {
+    getCoffee() {
+        console.log(`Programmer Needs Coffee`);
+    }
+
+    //! Method of parent class is being overridden.
+    requestLeave(leaves) {
+        console.log(`Programmer has Requested ${leaves+1} leaves (One Extra)`);
+    }
+
+    //! Super keyword is used to call method from parent class
+    requestLeave(leaves) {
+        super.requestLeave(leaves);
+    }
+}
+
+let firstEmployee = new Programmer();
+firstEmployee.requestLeave(5);

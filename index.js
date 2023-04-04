@@ -14,12 +14,27 @@ let number = 10;
 (number = 10) ? console.log("true"): console.log("false");
 
 //! Conditional Operator
+
+//! If Else statement
 if (number > 0) {
     console.log("First");
 } else if (number < 0) {
     console.log("Middle");
 } else {
     console.log("Last");
+}
+
+//! Switch Statement
+switch (number) {
+    case 1:
+        console.log("First");
+        break;
+    case 10:
+        console.log("Tenth");
+        break;
+
+    default:
+        break;
 }
 
 //! For Loop
